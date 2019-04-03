@@ -1,0 +1,39 @@
+{
+    "success": true,
+    "data": {
+      "key": "string",
+      "parentKey": "string",
+      "name": "string",
+      "children": [
+        {
+          "key": "string",
+          "parentKey": "string",
+          "name": "string",
+          "children": [
+            null
+          ],
+          "data": {
+            "id": 0,
+            "code": "string",
+            "name": "string",
+            "fullName": "string",
+            "parentCode": "string",
+            "isRootDept": true,
+            "displayOrder": 0
+          }
+        }
+      ],
+      "data": {
+        "id": 0,
+        "code": "string",
+        "name": "string",
+        "fullName": "string",
+        "parentCode": "string",
+        "isRootDept": true,
+        "displayOrder": 0
+      }
+    },
+    "code": 0,
+    "message": "string",
+    "time": "2018-11-22T06:53:57.364Z"
+  }

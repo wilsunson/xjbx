@@ -2,11 +2,14 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <h1>{{ info }}</h1>
-    <button @click="getuserInfo">{{number}}</button>
-    <el-select v-model="value" placeholder="请选择" @change="changeSelect">
+    <el-button @click="getuserInfo" type="primary">{{number}}</el-button>
+    <el-select v-model="select" placeholder="请选择" @change="changeSelect">
       <el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
       </el-option>
     </el-select>
+
+    <el-button type="primary" @click="link">link to manage</el-button>
+    <el-button type="danger" @click="emitGlobal">event bus</el-button>
   </div>
 </template>
 
@@ -18,6 +21,7 @@ export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
   info: any = '';
   number: number = 3;
+  select: any = '';
   options: object[] = [{
     value: '选项1',
     label: '黄金糕'
@@ -38,16 +42,23 @@ export default class HelloWorld extends Vue {
   getuserInfo() {
     return axios
       .get(' https://www.easy-mock.com/mock/5bc5456f49027948642034b2/baseurl/userinfo')
-      .then((res) => { this.info = res.data.data.username })
+      .then((res) => { this.info = res.data!.data!.username! })
       .catch((err) => { err })
   }
   add() {
     this.number += 1;
   }
 
+  link(){
+    this.$router.push({name:'manage'});
+  }
   changeSelect(val: any) {
     console.log("val", val)
   }
+  emitGlobal() {
+    this.$emit('global:event-bus');
+  }
+
   mounted() {
     //this.getuserInfo()
   }

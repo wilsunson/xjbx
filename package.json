@@ -9,10 +9,13 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^12.0.0",
+    "@ckeditor/ckeditor5-vue": "^1.0.0-beta.1",
     "axios": "^0.18.0",
     "element-ui": "^2.4.9",
     "vue": "^2.5.17",
     "vue-class-component": "^6.0.0",
+    "vue-event-proxy": "^1.0.5",
     "vue-property-decorator": "^7.0.0",
     "vue-router": "^3.0.1",
     "vue-signature-pad": "^1.1.5",
