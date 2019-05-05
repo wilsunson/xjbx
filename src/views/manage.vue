@@ -12,6 +12,7 @@
 						<template slot="title"><i class="el-icon-document"></i>数据管理</template>
 						<el-menu-item index="about">about</el-menu-item>
 						<el-menu-item index="input">input</el-menu-item>
+						<el-menu-item index="call">call</el-menu-item>
 					</el-submenu>
                </el-menu>
            </el-col>
@@ -28,11 +29,11 @@
 import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
 export default class Manage extends Vue{
-    defaultActive(){
-        	return this.$route.path.replace('/', '');
+  get  defaultActive(){
+        	return this.$route.name;
     }
     routedetail(){
-        console.log(`route detail ${this.$route}`)
+        console.log(`route detail`,this.$route,this.$route.path.replace('/', ''))
     }
 }
 </script>

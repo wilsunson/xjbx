@@ -27,7 +27,14 @@ export default new Router({
         name: 'input',
         meta:['ma','ip'],
         component: () => require.ensure([],()=>require('@/views/input.vue'))
-      }]
+      },
+      {
+        path: 'call',
+        name: 'call',
+        meta:['ca','ip'],
+        component: () => require.ensure([],()=>require('@/views/call.vue'))
+      },
+    ]
     },
    
   ]
