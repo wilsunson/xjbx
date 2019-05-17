@@ -34,6 +34,12 @@ export default new Router({
         meta:['ca','ip'],
         component: () => require.ensure([],()=>require('@/views/call.vue'))
       },
+      {
+        path: 'track',
+        name: 'track',
+        meta:['ma','ip'],
+        component: () => require.ensure([],()=>require('@/views/tracking.vue'))
+      },
     ]
     },
    

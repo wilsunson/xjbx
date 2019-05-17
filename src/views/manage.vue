@@ -13,6 +13,7 @@
 						<el-menu-item index="about">about</el-menu-item>
 						<el-menu-item index="input">input</el-menu-item>
 						<el-menu-item index="call">call</el-menu-item>
+						<el-menu-item index="track">tracking</el-menu-item>
 					</el-submenu>
                </el-menu>
            </el-col>
