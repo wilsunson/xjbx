@@ -2,6 +2,7 @@
   <div>
     {{num1}}
     <el-button type="warning" @click="getNumber">get a random number</el-button>
+    <Huakuai />
     <Steps :Steps="registSpets" :SetData="SetData" />
     <el-button type="primary" @click="registSpets++">+++</el-button>
     {{registSpets}}
@@ -12,9 +13,10 @@
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import Steps from "../components/Steps.vue";
+import Huakuai from "../components/Huakuai.vue";
 @Component({
   components: {
-    Steps
+    Steps,Huakuai
   }
 })
 export default class Input extends Vue {
